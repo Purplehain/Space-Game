@@ -1,8 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class ItemDatabase : MonoBehaviour {
-
+    private List<Item> items = new List<Item>();
 	// Use this for initialization
 	void Start () {
 	

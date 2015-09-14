@@ -10,28 +10,23 @@ public class Item
 	public float minValue;
 	public float maxValue;
 	public float weight;
-	public float durability;
-	public float itemDamage;
-	public float itemShield;
-	public float itemEnergy;
 
 	public ItemType itemType;
 
 	public enum ItemType{
-		Weapon,
-		Chassis,
-		Module,
-		Ressources
+        Consumeable,
 
 	}
 
 
-	public Item(string Name, string Desc, float MinValue, float MaxValue, float Weight)
+	public Item(string Name,int ID, string Desc, float MinValue, float MaxValue, float Weight)
 	{
 		name = Name;
 		desc = Desc;
+        itemID = ID;
 		minValue = MinValue;
 		maxValue = MaxValue;
 		weight = Weight;
+        itemIcon = Resources.Load<Sprite>("ItemIcons/" + Name);
 	}
 }
